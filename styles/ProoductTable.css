@@ -1,0 +1,125 @@
+/* Container styles */
+.table-container {
+  max-width: 70%; /* Matched width with brand-table-container */
+  margin: 30px auto;
+  padding: 30px; /* Increased padding for a larger appearance */
+  background: rgba(249, 249, 249, 0.9); /* Slight transparency using RGBA */
+  border-radius: 15px; /* Larger radius for a softer look */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow for emphasis */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Add subtle hover effect to the container */
+.table-container:hover {
+  transform: scale(1.02); /* Slight scale-up effect */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Title styles */
+.table-container h2 {
+  text-align: center;
+  font-size: 2rem; /* Matched font size with table-title */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Table styles */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.styled-table thead {
+  background-color: #4caf50;
+  color: white;
+}
+
+.styled-table th,
+.styled-table td {
+  text-align: left;
+  padding: 12px;
+}
+
+.styled-table th {
+  border-bottom: 2px solid #ddd;
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: rgba(76, 175, 80, 0.1); /* Light green tint for even rows */
+}
+
+.styled-table tbody tr:hover {
+  background-color: rgba(234, 250, 241, 0.9); /* Enhanced hover effect */
+}
+
+/* Button styles for product name */
+.styled-table tbody td button {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-weight: bold;
+  font-size: 1rem; /* Matched font size with brand-name-button */
+  cursor: pointer;
+  transition: color 0.2s ease-in-out; /* Smooth color transition */
+}
+
+.styled-table tbody td button:hover {
+  text-decoration: underline;
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/* Image styles */
+.styled-table tbody td img {
+  width: 60px; /* Slightly larger images for consistency with brand-logo */
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px; /* Softer rounded edges */
+  cursor: pointer;
+}
+
+/* Delete button */
+.styled-table tbody td button.delete {
+  padding: 8px 15px; /* Slightly larger button for better usability */
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 8px; /* Softer rounded button edges */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease; /* Smooth transitions */
+}
+
+.styled-table tbody td button.delete:hover {
+  background-color: #d90429;
+  transform: scale(1.1); /* Slight pop-out effect on hover */
+}
+
+/* Product details section */
+.product-details {
+  margin-top: 30px;
+  padding: 20px; /* Increased padding for a more spacious design */
+  background-color: rgba(255, 255, 255, 0.95); /* Slight transparency */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.product-details h3 {
+  font-size: 1.8rem; /* Matched font size with brand-details heading */
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.product-details p {
+  margin: 8px 0; /* Increased spacing between details */
+  font-size: 1rem;
+}
+
+.product-details img {
+  width: 120px; /* Larger logo for details, consistent with brand-details */
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px; /* Rounded corners */
+  margin-top: 15px;
+}

@@ -1,0 +1,109 @@
+/* AddBrand.css */
+
+/* Container */
+.add-brand-container {
+    min-height: 100vh;
+    background: linear-gradient(to right, #e0f7fa, #f0f4f8);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .add-brand-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  /* Title */
+  .form-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  /* Label Styles */
+  .label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #666;
+    display: block;
+  }
+  
+  /* Input Fields */
+  .input-field {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #333;
+    box-sizing: border-box;
+  }
+  
+  .input-field:focus {
+    border-color: #58a6ff;
+    outline: none;
+  }
+  
+  /* File Input */
+  .file-input {
+    display: block;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .image-preview {
+    margin-top: 1rem;
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Button Styles */
+  .submit-button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .add-brand-form {
+      padding: 1.5rem;
+    }
+  
+    .form-title {
+      font-size: 2rem;
+    }
+  
+    .input-field, .file-input, .submit-button {
+      padding: 0.8rem;
+    }
+  }
+  

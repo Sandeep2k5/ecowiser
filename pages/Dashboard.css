@@ -1,0 +1,348 @@
+/* General layout styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #1a1a2e;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  z-index: 1000;
+}
+
+.sidebar h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  margin: 10px 0;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #4e73df;
+}
+
+.sidebar .logout {
+  margin-top: auto;
+  background-color: #e74a3b;
+  color: white;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar .logout:hover {
+  background-color: #c0392b;
+}
+
+/* Main content styles */
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(to right, #d4fc79, #96e6a1);
+}
+
+.main-content header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-content header h1 {
+  font-size: 36px;
+  color: #333333;
+}
+
+.main-content header p {
+  color: #555555;
+}
+
+/* Carousel styles */
+.carousel-container {
+  position: relative;
+  width: calc(100% - 270px);
+  max-height: 500px;
+  overflow: hidden;
+  margin: 0 auto 20px auto;
+  background: #fff; /* White background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: none; /* Removed border */
+}
+
+.carousel-slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+  display: block;
+  opacity: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.carousel-navigation {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-prev,
+.carousel-next {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 32px;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Add Brand Button */
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.action-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-buttons .bg-green-500 {
+  background-color: #1cc88a;
+  color: white;
+}
+
+.action-buttons .bg-green-500:hover {
+  background-color: #13865c;
+}
+
+/* Table styles */
+.table-container {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.table-container h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #4caf50;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Carousel Styles */
+.carousel {
+  position: relative;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: none; /* Removed border */
+  background: #fff; /* White background */
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure the entire image is visible without stretching */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(calc(-100% * var(--current-slide, 0)));
+}
+
+.carousel-item {
+  flex: 1 0 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item-active {
+  display: flex;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.carousel-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button-prev {
+  left: 15px;
+}
+
+.carousel-button-next {
+  right: 15px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .main-content {
+      margin-left: 0;
+      padding: 10px;
+  }
+
+  .sidebar {
+      width: 100%;
+      height: auto;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 10px 0;
+  }
+
+  .carousel-container {
+      max-height: 300px;
+  }
+
+  .carousel {
+      max-width: 100%;
+      height: 300px;
+  }
+
+  .carousel-button {
+      font-size: 24px;
+      padding: 10px;
+  }
+}
+
+/* Search bar position for top right */
+.search-bar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  background-color: #fff; /* White background */
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 5px 15px;
+  width: 250px; /* Adjust width as needed */
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+  border: 2px solid #4e73df; /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(78, 115, 223, 0.5);
+}
+
+.search-bar button {
+  background-color: #4e73df;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-bar button:hover {
+  background-color: #3b5bde;
+  transform: scale(1.1);
+}
